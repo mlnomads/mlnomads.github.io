@@ -1,1 +1,50 @@
-<h1>ML Nomads Loading...</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Nomads</title>
+    <script>
+        function toggleMenu() {
+          var navbar = document.getElementsByClassName("navbar")[0];
+          navbar.classList.toggle("responsive");
+        }
+        </script>
+        
+
+
+</head>
+<body>
+    <div class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <a href="#events">Events</a>
+        <a href="#courses">Courses</a>
+        <a href="#projects">Projects</a>
+        <a href="#home" id="home-link"><img src="imgs/logo.png" alt="" srcset="" class="nav-logo"></a>
+        <a href="#blog">Blog</a>
+        <a href="#network">Network</a>
+        <a href="#contact">Contact Us</a>
+    
+    </div>
+    <div class="hero-sec">
+    <canvas id="snow"></canvas>
+    <script src="storm.js"></script>
+
+    <div class="circle-container">
+    </div>
+    <div class="circle-text">
+        <h1>Machine Learning Nomads</h1>
+        <a href="#join" class="join-btn">Join Us</a>
+    </div>
+</div>
+
+
+</body>
+</html>
