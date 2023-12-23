@@ -1,5 +1,5 @@
-var Snow = {
-    el: "#snow", 
+var Sand = {
+    el: "#sand", 
     density: 10000, // higher = fewer bits
     maxHSpeed: 5, // How much do you want them to move horizontally
     minFallSpeed: 2,
@@ -63,4 +63,4 @@ var Snow = {
       
   };
   
-  var confetti = Snow.init();
+  var confetti = Sand.init();

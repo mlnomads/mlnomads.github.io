@@ -232,7 +232,7 @@ canvas{
   border: 2px solid black; /* Optional: change border color to black on hover */
 }
 
-#snow {
+#sand {
   position: absolute;
   z-index: -1; /* Set z-index to a negative value */
 }
