@@ -1,0 +1,76 @@
+body {
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-main);
+  line-height: 1.2;
+  color: var(--text-color);
+}
+
+p, span, input, textarea, button {
+  font-family: var(--font-body);
+}
+
+.hero-subtitle {
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+.project-description {
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+.funding-description {
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+.newsletter p {
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+.nav-links-left a,
+.nav-links-right a {
+  font-family: var(--font-main);
+}
+
+.tech-tag {
+  font-family: var(--font-body);
+}
+
+.project-btn {
+  font-family: var(--font-body);
+  font-weight: 500;
+}
+
+.footer-links a {
+  font-family: var(--font-body);
+}
+
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
