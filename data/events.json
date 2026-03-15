@@ -1,5 +1,25 @@
 {
   "events": [
-   
+    {
+      "title": "Introduction to White-Box AI",
+      "date": "March 22, 2026",
+      "description": "A beginner-friendly workshop exploring what makes AI transparent and interpretable. Learn the core concepts behind MLNomads' approach.",
+      "type": "workshop",
+      "link": "https://lu.ma/mlnomads"
+    },
+    {
+      "title": "AetherLM Paper Reading",
+      "date": "March 29, 2026",
+      "description": "Community paper reading session on cosmos-inspired neural network architectures and their applications in language modeling.",
+      "type": "talk",
+      "link": "https://lu.ma/mlnomads"
+    },
+    {
+      "title": "Open Source Contributor Onboarding",
+      "date": "April 5, 2026",
+      "description": "Get set up to contribute to MLNomads projects. We'll walk through the codebase, tooling, and how to pick your first issue.",
+      "type": "meetup",
+      "link": "https://lu.ma/mlnomads"
+    }
   ]
 }

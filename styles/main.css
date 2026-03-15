@@ -6,12 +6,18 @@
 /* Components */
 @import 'components/navbar.css';
 @import 'components/hero.css';
-@import 'components/projects.css';
+@import 'components/about.css';
+@import 'components/pillars.css';
+@import 'components/events.css';
+@import 'components/highlights.css';
+@import 'components/blog.css';
+@import 'components/faq.css';
+@import 'components/join.css';
+@import 'components/newsletter.css';
 @import 'components/footer.css';
 @import 'components/buttons.css';
-@import 'components/newsletter.css';
-@import 'components/funding.css';
 @import 'components/loader.css';
+@import 'components/scrolltop.css';
 
 /* Layout */
 @import 'components/grid.css';
@@ -24,128 +30,39 @@
 
 
 html {
-    scroll-behavior: smooth;
-  }
-
-.compact-projects {
-  padding: 4rem 2rem;
+  scroll-behavior: smooth;
 }
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  max-width: 1200px;
-  margin: 2rem auto;
-}
-
-.project-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 1.5rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.project-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 1rem;
-}
-
-.project-header h3 {
-  font-size: 1.25rem;
-  margin: 0;
-  color: var(--text-primary);
-}
-
-.project-badges {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.badge {
-  font-size: 0.75rem;
-  padding: 0.25rem 0.5rem;
-  border-radius: 12px;
-  font-weight: 500;
-}
-
-.badge.new {
-  background: rgba(var(--accent-color-rgb), 0.2);
-  color: var(--accent-color);
-}
-
-.badge.status {
-  background: rgba(39, 174, 96, 0.2);
-  color: #27AE60;
-}
-
-.project-description {
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: var(--text-secondary);
-  margin-bottom: 1rem;
-}
-
-.project-tech {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1.25rem;
-}
-
-.tech-tag {
-  font-size: 0.75rem;
-  padding: 0.25rem 0.75rem;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  color: var(--text-secondary);
-}
-
-.project-actions {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.primary-btn {
-  padding: 0.5rem 1rem;
+/* ── Skip link (accessibility) ── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
   background: var(--accent-color);
-  color: var(--text-primary);
-  border-radius: 8px;
+  color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  z-index: 100000;
+  font-weight: 600;
   text-decoration: none;
-  font-size: 0.9rem;
-  transition: background 0.2s ease;
-  flex: 1;
-  text-align: center;
 }
 
-.primary-btn:hover {
-  background: var(--accent-color-hover);
+.skip-link:focus {
+  top: 1rem;
 }
 
-.github-link {
-  color: var(--text-secondary);
-  font-size: 1.25rem;
-  transition: color 0.2s ease;
+/* ── Focus styles (accessibility) ── */
+:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
 }
 
-.github-link:hover {
-  color: var(--text-primary);
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+  outline: none;
 }
 
-.projects-footer {
-  text-align: center;
-  margin-top: 2rem;
-}
-
+/* ── View All / CTA buttons ── */
 .view-all-btn {
   display: inline-flex;
   align-items: center;
@@ -153,19 +70,109 @@ html {
   color: var(--accent-color);
   text-decoration: none;
   font-size: 0.9rem;
-  transition: color 0.2s ease;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid rgba(244, 165, 96, 0.3);
+  border-radius: var(--radius-md);
+  transition: gap 0.3s ease, border-color 0.3s ease, background 0.3s ease;
 }
 
 .view-all-btn:hover {
-  color: var(--accent-color-hover);
+  gap: 0.75rem;
+  border-color: var(--accent-color);
+  background: rgba(244, 165, 96, 0.05);
+}
+
+/* ── Nav Discord button ── */
+.nav-discord-btn {
+  background: rgba(88, 101, 242, 0.15);
+  border: 1px solid rgba(88, 101, 242, 0.3);
+  border-radius: var(--radius-md);
+  padding: 0.4rem 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: background 0.3s ease;
+}
+
+.nav-discord-btn:hover {
+  background: rgba(88, 101, 242, 0.3);
+}
+
+/* ── Footer links column ── */
+.footer-col.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-col.links h4,
+.footer-col.contact h4 {
+  font-size: 1rem;
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.footer-col.links a {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.footer-col.links a:hover {
+  color: var(--accent-color);
+  padding-left: 0.25rem;
+}
+
+/* ── Section dividers ── */
+.section-divider {
+  height: 1px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(244, 165, 96, 0.2),
+    transparent
+  );
+}
+
+/* ── Scroll-reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Section subtitle ── */
+.section-subtitle {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 1rem;
+  margin-top: -1rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 @media (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
+  .nav-discord-btn {
+    background: rgba(88, 101, 242, 0.12);
   }
-  
-  .project-card {
-    padding: 1.25rem;
+
+  .section-subtitle {
+    font-size: 0.9rem;
+    margin-top: -0.5rem;
   }
 }

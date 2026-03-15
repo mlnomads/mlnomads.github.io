@@ -1,17 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Similar head as main page -->
-    <title>ML Nomads - Events</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#2d0f41" />
+  <meta name="description" content="MLNomads community events - workshops, talks, and meetups" />
+  <title>Events | MLNomads</title>
+  <link rel="icon" type="image/x-icon" href="../imgs/favicon.ico" />
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet" />
 </head>
+
 <body>
-    <!-- Include same navbar -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-links-left">
+      <a href="../#about">About</a>
+      <a href="./">Events</a>
+      <a href="https://blog.mlnomads.com/" target="_blank" rel="noopener">Blog</a>
+    </div>
+    <a href="../" id="home-link" aria-label="MLNomads Home">
+      <img src="../imgs/MlNomadsSVG.svg" alt="MLNomads Logo" class="nav-logo" />
+    </a>
+    <div class="nav-links-right">
+      <a href="../#faq">FAQ</a>
+      <a href="https://github.com/mlnomads" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.mlnomads.com/discord" class="nav-discord-btn" target="_blank" rel="noopener">
+        <i class="fab fa-discord" aria-hidden="true"></i> Discord
+      </a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main id="main">
+    <div class="breadcrumbs">
+      <a href="../">Home</a>
+      <span aria-hidden="true">/</span>
+      <span class="current" aria-current="page">Events</span>
+    </div>
+
     <div class="page-header">
-        <h1>All Events</h1>
+      <h1>All Events</h1>
+      <p>Workshops, talks, paper readings, and community meetups</p>
     </div>
-    <div class="events-container">
-        <!-- All events will be loaded here -->
+
+    <div class="events-page-container">
+      <div class="events-grid" id="events-grid"></div>
+      <div class="events-footer" style="text-align: center; margin: 2rem 0;">
+        <a href="https://lu.ma/mlnomads" class="view-all-btn" target="_blank" rel="noopener">
+          <i class="fas fa-calendar-alt" aria-hidden="true"></i> View All on Luma
+        </a>
+      </div>
     </div>
-    <script src="../js/eventsPage.js"></script>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <p>&copy; 2025 MLNomads. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" defer></script>
+  <script src="../js/menu.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const grid = document.getElementById('events-grid');
+      if (!grid) return;
+      try {
+        const response = await fetch('../data/events.json');
+        const data = await response.json();
+        const events = data.events || [];
+        if (!events.length) {
+          grid.innerHTML = '<div class="events-empty"><i class="fas fa-calendar-alt"></i><p>No events yet. Check <a href="https://lu.ma/mlnomads" target="_blank" style="color: var(--accent-color);">Luma</a> for updates!</p></div>';
+          return;
+        }
+        grid.innerHTML = events.map(event => `
+          <a href="${event.link}" class="event-card" target="_blank" rel="noopener">
+            <span class="event-type ${event.type || ''}">${event.type || 'Event'}</span>
+            <div class="event-date"><i class="fas fa-calendar-day"></i> ${event.date}</div>
+            <h3>${event.title}</h3>
+            <p>${event.description}</p>
+            <span class="event-link">RSVP on Luma <i class="fas fa-arrow-right"></i></span>
+          </a>
+        `).join('');
+      } catch (e) {
+        grid.innerHTML = '<div class="events-empty"><p>Check <a href="https://lu.ma/mlnomads" target="_blank" style="color: var(--accent-color);">Luma</a> for events!</p></div>';
+      }
+    });
+  </script>
+
+  <style>
+    .breadcrumbs {
+      padding: 90px 2rem 0;
+      max-width: 1000px;
+      margin: 0 auto;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.4);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .breadcrumbs a { color: var(--accent-color); text-decoration: none; }
+    .breadcrumbs .current { color: rgba(255, 255, 255, 0.7); }
+    .page-header { text-align: center; padding: 2rem; }
+    .page-header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+    .page-header p { color: rgba(255, 255, 255, 0.5); font-size: 1rem; }
+    .events-page-container { max-width: 1000px; margin: 0 auto; padding: 0 2rem 4rem; }
+  </style>
 </body>
+
 </html>

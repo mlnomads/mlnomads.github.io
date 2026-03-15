@@ -1,0 +1,16 @@
+{
+  "name": "MLNomads",
+  "short_name": "MLNomads",
+  "description": "Building responsible white-box artificial intelligence",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2d0f41",
+  "theme_color": "#2d0f41",
+  "icons": [
+    {
+      "src": "/imgs/favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    }
+  ]
+}

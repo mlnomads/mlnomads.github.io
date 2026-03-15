@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#2d0f41" />
+  <title>404 - Page Not Found | MLNomads</title>
+  <link rel="icon" type="image/x-icon" href="./imgs/favicon.ico" />
+  <link rel="stylesheet" href="./styles/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <style>
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(135deg, #2d0f41 0%, #3d1f51 100%);
+      padding: 2rem;
+    }
+
+    .error-code {
+      font-size: clamp(5rem, 15vw, 10rem);
+      font-family: "Orbitron", sans-serif;
+      color: rgba(244, 165, 96, 0.15);
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+
+    .error-message {
+      font-size: 1.5rem;
+      color: white;
+      margin-bottom: 0.5rem;
+      font-family: "Orbitron", sans-serif;
+    }
+
+    .error-desc {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      max-width: 400px;
+    }
+
+    .error-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: rgb(244, 165, 96);
+      color: #2d0f41;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s ease;
+    }
+
+    .error-home:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="error-page">
+    <div class="error-code">404</div>
+    <h1 class="error-message">Lost in the Desert</h1>
+    <p class="error-desc">The page you're looking for doesn't exist or has been moved.</p>
+    <a href="/" class="error-home">Back to Home</a>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls \"c:/Users/tahab/Documents/github/mlnomads.github.io/\"*.js \"c:/Users/tahab/Documents/github/mlnomads.github.io/\"*.html \"c:/Users/tahab/Documents/github/mlnomads.github.io/\"*.json)"
+    ]
+  }
+}

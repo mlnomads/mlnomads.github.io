@@ -1,16 +1,6 @@
-@media (max-width: 1200px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 @media (max-width: 768px) {
   :root {
     --section-padding: 40px 20px;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
   }
 
   .hero-subtitle {
@@ -26,29 +16,10 @@
     display: flex;
   }
 
-  .project {
-    padding: var(--spacing-md);
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  #contact-form {
-    margin: 0 var(--spacing-md);
-  }
-
   .container,
-  section,
-  .projects-grid {
+  section {
     padding-left: var(--spacing-sm);
     padding-right: var(--spacing-sm);
-  }
-
-  .project-links {
-    flex-wrap: wrap;
-  }
-
-  .project-tech {
-    flex-wrap: wrap;
   }
 
   .footer-links {
@@ -64,9 +35,8 @@
 }
 
 /* Container control */
-.container, 
-section, 
-.projects-grid,
+.container,
+section,
 .footer-content {
   width: 100%;
   max-width: 100vw;
