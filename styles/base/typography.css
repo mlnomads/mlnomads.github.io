@@ -18,37 +18,9 @@ p, span, input, textarea, button {
   font-weight: 400;
 }
 
-.project-description {
-  font-family: var(--font-body);
-  font-weight: 400;
-}
-
-.funding-description {
-  font-family: var(--font-body);
-  font-weight: 400;
-}
-
-.newsletter p {
-  font-family: var(--font-body);
-  font-weight: 400;
-}
-
 .nav-links-left a,
 .nav-links-right a {
   font-family: var(--font-main);
-}
-
-.tech-tag {
-  font-family: var(--font-body);
-}
-
-.project-btn {
-  font-family: var(--font-body);
-  font-weight: 500;
-}
-
-.footer-links a {
-  font-family: var(--font-body);
 }
 
 h2 {

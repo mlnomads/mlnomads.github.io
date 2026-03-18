@@ -17,19 +17,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending...';
+    submitBtn.textContent = 'Opening...';
 
-    // Open mailto as fallback — in production, replace with an API call
-    const subject = encodeURIComponent('Newsletter Subscription');
-    const body = encodeURIComponent(`New subscriber: ${email}`);
+    const subject = encodeURIComponent('MLNomads — Interest from ' + email);
+    const body = encodeURIComponent('Hi MLNomads team,\n\nI\'d like to stay updated on your research and community.\n\nEmail: ' + email);
     window.location.href = `mailto:info@mlnomads.com?subject=${subject}&body=${body}`;
 
-    // Show success after short delay
     setTimeout(() => {
-      status.textContent = 'Thanks! Check your email client to confirm.';
+      status.textContent = 'Your email client should open shortly. Send the message to complete!';
       status.className = 'newsletter-status success';
       submitBtn.disabled = false;
-      submitBtn.textContent = 'Subscribe';
+      submitBtn.textContent = 'Get in Touch';
       emailInput.value = '';
     }, 1000);
   });

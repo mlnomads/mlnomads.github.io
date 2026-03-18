@@ -53,7 +53,6 @@
   align-items: center;
   justify-content: center;
   z-index: 2;
-  pointer-events: none;
   transition: transform 0.3s ease;
 }
 
@@ -110,8 +109,13 @@
   transform-origin: center;
 }
 
-.navbar a:hover::before {
+.navbar a:hover::before,
+.navbar a.active::before {
   transform: translateX(-50%) scaleX(1);
+}
+
+.navbar a.active {
+  color: #fff;
 }
 
 /* Scroll Progress */
@@ -159,6 +163,11 @@
   border-radius: 1px;
 }
 
+/* ── Mobile overlay ── */
+.nav-overlay {
+  display: none;
+}
+
 /* ── Mobile ── */
 @media (max-width: 768px) {
   .hamburger {
@@ -172,15 +181,36 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 1rem;
+    transition: background 0.3s ease;
   }
 
   .nav-links-left,
   .nav-links-right {
-    display: none;
     flex-direction: column;
     width: 100%;
     margin: 0;
     gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.3s ease;
+  }
+
+  .nav-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .nav-overlay.visible {
+    opacity: 1;
+    visibility: visible;
   }
 
   .navbar.responsive {
@@ -194,7 +224,8 @@
 
   .navbar.responsive .nav-links-left,
   .navbar.responsive .nav-links-right {
-    display: flex;
+    max-height: 500px;
+    opacity: 1;
   }
 
   .navbar.responsive a {
@@ -206,7 +237,8 @@
     text-align: center;
   }
 
-  .navbar.responsive a:hover {
+  .navbar.responsive a:hover,
+  .navbar.responsive a:active {
     background: rgba(255, 255, 255, 0.05);
   }
 

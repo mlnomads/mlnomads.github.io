@@ -21,9 +21,10 @@
   width: min(200px, 55vw);
   height: min(200px, 55vw);
   border-radius: 50%;
-  background: url("../../imgs/mlnomads-main-hero.png") no-repeat center/cover;
+  background: linear-gradient(135deg, #3d1f51, #2d0f41) url("../../imgs/mlnomads-main-hero.png") no-repeat center/cover;
   margin: 1.5vh auto;
   position: relative;
+  z-index: 2;
   animation: floatAnimation 6s ease-in-out infinite;
   filter: drop-shadow(0 0 25px rgba(244, 165, 96, 0.15));
 }
@@ -129,34 +130,6 @@
   transform: translateY(-3px);
 }
 
-/* ── Social icons ── */
-.social-icons {
-  margin-top: 2rem;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.8s ease-out 1.2s forwards;
-}
-
-.social-icons a {
-  width: 42px;
-  height: 42px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.08);
-  margin: 0 0.6rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.95rem;
-}
-
-.social-icons a:hover {
-  transform: translateY(-4px);
-  background: rgba(244, 165, 96, 0.15);
-  color: var(--accent-color);
-}
-
 /* ── Keyframes ── */
 @keyframes fadeInUp {
   from {
@@ -187,7 +160,7 @@
   transform: translateX(-50%);
   z-index: 2;
   opacity: 0;
-  animation: fadeInUp 0.8s ease-out 2s forwards;
+  animation: fadeInUp 0.8s ease-out 1s forwards;
 }
 
 .scroll-hint span {
@@ -228,12 +201,6 @@
     justify-content: center;
   }
 
-  .social-icons a {
-    width: 38px;
-    height: 38px;
-    margin: 0 0.4rem;
-  }
-
   .circle-container {
     width: min(160px, 45vw);
     height: min(160px, 45vw);
@@ -249,10 +216,6 @@
 
   .hero-subtitle {
     margin: 0.3rem auto;
-  }
-
-  .social-icons {
-    margin-top: 1rem;
   }
 
   .hero-buttons {

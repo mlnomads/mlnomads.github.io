@@ -66,6 +66,15 @@
   color: var(--accent-color);
 }
 
+.footer-col.contact a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.3s ease;
+}
+
+.footer-col.contact a:hover {
+  color: var(--accent-color);
+}
+
 .footer-social {
   display: flex;
   gap: 1rem;

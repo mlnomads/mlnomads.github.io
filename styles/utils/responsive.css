@@ -1,3 +1,16 @@
+/* ── Tablet (768–1024px) ── */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .pillars-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 100%;
+  }
+
+  .highlights-grid {
+    max-width: 100%;
+  }
+}
+
+/* ── Mobile ── */
 @media (max-width: 768px) {
   :root {
     --section-padding: 40px 20px;
@@ -25,8 +38,42 @@
   .footer-links {
     gap: 1rem;
   }
+
+  /* Pillars: 2-col on wider phones */
+  .pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+  }
 }
 
+/* ── Small phones ── */
+@media (max-width: 480px) {
+  .pillars-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 360px) {
+  .join-links {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Touch feedback ── */
+@media (hover: none) {
+  a.pillar-card:active,
+  .event-card:active,
+  .highlight-card:active,
+  .join-link-card:active,
+  .blog-cta-btn:active,
+  .faq-item summary:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+}
+
+/* ── Reduced motion ── */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
@@ -34,7 +81,7 @@
   }
 }
 
-/* Container control */
+/* ── Container control ── */
 .container,
 section,
 .footer-content {

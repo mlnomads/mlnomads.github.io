@@ -14,8 +14,6 @@ var Sand = {
         "rgba(220, 208, 180, 0.6)",
         "rgba(184, 159, 122, 0.6)"
     ],
-    connectionDistance: 50,
-    connectionOpacity: 0.1,
     init() {
         this.canvas = document.querySelector(this.el);
         if (!this.canvas) return;
@@ -71,24 +69,6 @@ var Sand = {
             });
         }
     },
-    drawConnections() {
-        for (let i = 0; i < this.particles.length; i++) {
-            for (let j = i + 1; j < this.particles.length; j++) {
-                let p1 = this.particles[i];
-                let p2 = this.particles[j];
-                let dist = Math.hypot(p1.x - p2.x, p1.y - p2.y);
-                if (dist < this.connectionDistance) {
-                    let force = (this.connectionDistance - dist) / this.connectionDistance;
-                    this.ctx.strokeStyle = "rgba(255, 255, 255, " + this.connectionOpacity + ")";
-                    this.ctx.lineWidth = force * 2;
-                    this.ctx.beginPath();
-                    this.ctx.moveTo(p1.x, p1.y);
-                    this.ctx.lineTo(p2.x, p2.y);
-                    this.ctx.stroke();
-                }
-            }
-        }
-    },
     render() {
         if (this.quit || this.paused) return;
 
@@ -103,7 +83,6 @@ var Sand = {
                 p.y = Math.random() * this.h - this.h / 2;
             }
         });
-        this.drawConnections();
         requestAnimationFrame(this.render.bind(this));
     },
     destroy() {

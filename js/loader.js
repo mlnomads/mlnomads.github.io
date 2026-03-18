@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Dynamic copyright year
+    const yearEl = document.getElementById('footer-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
     const loader = document.querySelector('.loader-wrapper');
-    const minLoadTime = 400;
+    const minLoadTime = 200;
     const startTime = Date.now();
 
     const hideLoader = () => {
@@ -17,6 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.addEventListener('load', hideLoader);
-    setTimeout(hideLoader, 1500);
+    setTimeout(hideLoader, 800);
     document.body.style.overflow = 'hidden';
 });

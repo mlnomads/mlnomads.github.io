@@ -17,7 +17,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#2d0f41" />
   <meta name="description"
-    content="MLNomads - Building responsible white-box artificial intelligence. Join our community of AI researchers and enthusiasts working on transparent, interpretable AI systems." />
+    content="MLNomads - An AI community organizing hackathons, workshops, and events around transparent, interpretable AI. Join us to learn, build, and share." />
   <meta name="keywords"
     content="machine learning, AI, R&D, education, Deep Learning, Neural Networks, physics-inspired, white-box AI, interpretable AI, transparent AI, community" />
 
@@ -25,7 +25,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="MLNomads - Transparent AI Research Community" />
   <meta property="og:description"
-    content="Join MLNomads in building responsible white-box artificial intelligence." />
+    content="An AI community for hackathons, workshops, and open-source research on interpretable AI." />
   <meta property="og:image" content="https://mlnomads.com/imgs/og-image.jpg" />
   <meta property="og:url" content="https://mlnomads.com" />
   <meta property="og:site_name" content="MLNomads" />
@@ -35,7 +35,7 @@
   <meta name="twitter:site" content="@mlnomads" />
   <meta name="twitter:title" content="MLNomads - Transparent AI Research Community" />
   <meta name="twitter:description"
-    content="Join MLNomads in building responsible white-box artificial intelligence." />
+    content="An AI community for hackathons, workshops, and open-source research on interpretable AI." />
   <meta name="twitter:image" content="https://mlnomads.com/imgs/og-image.jpg" />
 
   <!-- Favicon -->
@@ -50,6 +50,7 @@
   <link rel="stylesheet" href="./styles/main.css" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
     rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <title>MLNomads - Transparent AI Research Community</title>
 </head>
 
@@ -100,27 +101,22 @@
     <div class="scroll-progress-right" aria-hidden="true"></div>
   </nav>
 
+  <div class="nav-overlay" id="nav-overlay"></div>
+
   <!-- Hero -->
   <header class="hero-sec">
     <canvas id="sand" aria-hidden="true"></canvas>
-    <script src="storm.js"></script>
     <div class="circle-container"></div>
     <div class="circle-text">
       <h1>MLNomads</h1>
       <p class="hero-subtitle">
-        Building responsible white-box artificial intelligence one neuron at a time
+        An AI community exploring white-box models through hackathons, workshops, and open-source research
       </p>
       <div class="hero-buttons">
         <a href="https://www.mlnomads.com/discord" class="hero-btn discord-btn" target="_blank" rel="noopener">
           <i class="fab fa-discord" aria-hidden="true"></i> Join Our Discord
         </a>
-        <a href="#about" class="hero-btn secondary-btn">Learn More</a>
-      </div>
-      <div class="social-icons">
-        <a href="https://twitter.com/mlnomads" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-        <a href="https://linkedin.com/company/mlnomads" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
-        <a href="https://github.com/mlnomads" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
-        <a href="https://instagram.com/mlnomads" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="#events" class="hero-btn secondary-btn">Upcoming Events</a>
       </div>
     </div>
     <div class="scroll-hint" aria-hidden="true">
@@ -128,63 +124,35 @@
     </div>
   </header>
 
+  <main>
   <!-- About -->
   <section id="about" class="about-section reveal">
     <h2>About MLNomads</h2>
     <div class="about-content">
       <div class="about-text">
         <p>
-          MLNomads is a research community dedicated to building <strong>transparent, interpretable AI systems</strong>.
-          We believe that the future of artificial intelligence must be understandable, auditable, and responsible.
+          MLNomads is a community of AI enthusiasts, researchers, and engineers who learn and build together.
+          We organize <strong>hackathons, workshops, and events</strong> around transparent, interpretable AI.
         </p>
         <p>
-          Our work is rooted in physics-inspired approaches to neural networks, creating models where every decision
-          can be traced, understood, and trusted. We call this <strong>white-box AI</strong>.
+          Our focus is <strong>white-box AI</strong> — models where every decision can be traced and understood.
+          Whether you're just getting started or deep in research, there's a place for you here.
         </p>
       </div>
       <div class="about-stats">
         <div class="stat-item">
-          <span class="stat-value">Open</span>
-          <span class="stat-label">Source</span>
+          <span class="stat-value"><i class="fas fa-users" aria-hidden="true"></i></span>
+          <span class="stat-label">Hackathons</span>
         </div>
         <div class="stat-item">
-          <span class="stat-value">Global</span>
-          <span class="stat-label">Community</span>
+          <span class="stat-value"><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i></span>
+          <span class="stat-label">Workshops</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value"><i class="fas fa-code-branch" aria-hidden="true"></i></span>
+          <span class="stat-label">Open Source</span>
         </div>
       </div>
-    </div>
-  </section>
-
-  <div class="section-divider" aria-hidden="true"></div>
-
-  <!-- What We Build -->
-  <section id="pillars" class="pillars-section reveal">
-    <h2>What We Build</h2>
-    <p class="section-subtitle">Open-source tools for the future of interpretable AI</p>
-    <div class="pillars-grid">
-      <div class="pillar-card">
-        <div class="pillar-icon"><i class="fas fa-brain" aria-hidden="true"></i></div>
-        <h3>White-Box Models</h3>
-        <p>Language models built from scratch where every neuron's decision can be traced and understood.</p>
-        <span class="pillar-tag">AetherLM</span>
-      </div>
-      <div class="pillar-card">
-        <div class="pillar-icon"><i class="fas fa-shield-alt" aria-hidden="true"></i></div>
-        <h3>AI Security</h3>
-        <p>Tools that let builders pentest model weights and uncover hidden input-weight relationships.</p>
-        <span class="pillar-tag">NNMap</span>
-      </div>
-      <div class="pillar-card">
-        <div class="pillar-icon"><i class="fas fa-laptop-code" aria-hidden="true"></i></div>
-        <h3>Developer Tools</h3>
-        <p>AI-first productivity tools designed for offline-first research and development workflows.</p>
-        <span class="pillar-tag">BashNota</span>
-      </div>
-    </div>
-    <div class="pillars-footer">
-      <a href="https://github.com/mlnomads" class="view-all-btn" target="_blank" rel="noopener">
-        <i class="fab fa-github" aria-hidden="true"></i> Explore on GitHub
-      </a>
     </div>
   </section>
 
@@ -193,7 +161,7 @@
   <!-- Events -->
   <section id="events" class="events-section reveal">
     <h2>Upcoming Events</h2>
-    <p class="section-subtitle">Join us for workshops, talks, and community meetups</p>
+    <p class="section-subtitle">Hackathons, workshops, paper readings, and community meetups</p>
     <div class="events-grid" id="events-grid"></div>
     <div class="events-footer">
       <a href="https://lu.ma/mlnomads" class="view-all-btn" target="_blank" rel="noopener">
@@ -204,26 +172,68 @@
 
   <div class="section-divider" aria-hidden="true"></div>
 
-  <!-- Community Highlights -->
+  <!-- What We Do -->
   <section id="highlights" class="highlights-section reveal">
-    <h2>Community</h2>
-    <p class="section-subtitle">A growing network of researchers, engineers, and AI enthusiasts</p>
+    <h2>What We Do</h2>
+    <p class="section-subtitle">How we learn, build, and share as a community</p>
     <div class="highlights-grid">
       <div class="highlight-card">
-        <i class="fas fa-globe" aria-hidden="true"></i>
-        <h3>Global & Remote</h3>
-        <p>Members from around the world collaborating asynchronously on Discord and GitHub.</p>
+        <div class="highlight-icon"><i class="fas fa-trophy" aria-hidden="true"></i></div>
+        <div class="highlight-body">
+          <h3>Hackathons</h3>
+          <p>We host hackathons where teams build AI projects from scratch — interpretable models, tools, and experiments.</p>
+        </div>
       </div>
       <div class="highlight-card">
-        <i class="fas fa-book-open" aria-hidden="true"></i>
-        <h3>Learn Together</h3>
-        <p>Weekly paper readings, workshops, and knowledge sharing sessions for all skill levels.</p>
+        <div class="highlight-icon"><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i></div>
+        <div class="highlight-body">
+          <h3>Workshops & Talks</h3>
+          <p>Hands-on workshops, paper readings, and talks on topics from neural network internals to AI safety. All levels welcome.</p>
+        </div>
       </div>
       <div class="highlight-card">
-        <i class="fas fa-code-branch" aria-hidden="true"></i>
-        <h3>Build in the Open</h3>
-        <p>Every line of code, every decision is public. We believe transparency drives better AI.</p>
+        <div class="highlight-icon"><i class="fas fa-code-branch" aria-hidden="true"></i></div>
+        <div class="highlight-body">
+          <h3>Open-Source Projects</h3>
+          <p>We build tools together in the open. Our repos, discussions, and roadmaps are public for anyone to contribute.</p>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <div class="section-divider" aria-hidden="true"></div>
+
+  <!-- Our Projects -->
+  <section id="pillars" class="pillars-section reveal">
+    <h2>Our Projects</h2>
+    <p class="section-subtitle">Open-source tools built by the community</p>
+    <div class="pillars-grid">
+      <a href="https://github.com/mlnomads/aetherBERT" class="pillar-card" target="_blank" rel="noopener">
+        <div class="pillar-icon"><i class="fas fa-brain" aria-hidden="true"></i></div>
+        <h3>White-Box Models</h3>
+        <p>Language models built from scratch where every neuron's decision can be traced and understood.</p>
+        <span class="pillar-tag">AetherLM</span>
+        <span class="pillar-link">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+      </a>
+      <a href="https://github.com/mlnomads" class="pillar-card" target="_blank" rel="noopener">
+        <div class="pillar-icon"><i class="fas fa-shield-alt" aria-hidden="true"></i></div>
+        <h3>AI Security</h3>
+        <p>Tools that let builders pentest model weights and uncover hidden input-weight relationships.</p>
+        <span class="pillar-tag">NNMap</span>
+        <span class="pillar-link">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+      </a>
+      <a href="https://bashnota.com" class="pillar-card" target="_blank" rel="noopener">
+        <div class="pillar-icon"><i class="fas fa-laptop-code" aria-hidden="true"></i></div>
+        <h3>Developer Tools</h3>
+        <p>AI-first productivity tools designed for offline-first research and development workflows.</p>
+        <span class="pillar-tag">BashNota</span>
+        <span class="pillar-link">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+      </a>
+    </div>
+    <div class="pillars-footer">
+      <a href="https://github.com/mlnomads" class="view-all-btn" target="_blank" rel="noopener">
+        <i class="fab fa-github" aria-hidden="true"></i> Explore on GitHub
+      </a>
     </div>
   </section>
 
@@ -232,37 +242,14 @@
   <!-- Blog Preview -->
   <section id="blog" class="blog-section reveal">
     <h2>From the Blog</h2>
-    <p class="section-subtitle">Thoughts on white-box AI, research updates, and community stories</p>
-    <div class="blog-grid">
-      <a href="https://blog.mlnomads.com/" class="blog-card" target="_blank" rel="noopener">
-        <div class="blog-card-content">
-          <span class="blog-tag">Research</span>
-          <h3>Understanding White-Box Neural Networks</h3>
-          <p>Exploring physics-inspired approaches to building transparent AI models that can be fully interpreted.</p>
-          <span class="blog-read-more">Read on Blog <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
-        </div>
-      </a>
-      <a href="https://blog.mlnomads.com/" class="blog-card" target="_blank" rel="noopener">
-        <div class="blog-card-content">
-          <span class="blog-tag">Community</span>
-          <h3>Building AI Together</h3>
-          <p>How our open-source community is shaping the future of responsible artificial intelligence.</p>
-          <span class="blog-read-more">Read on Blog <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
-        </div>
-      </a>
-      <a href="https://blog.mlnomads.com/" class="blog-card" target="_blank" rel="noopener">
-        <div class="blog-card-content">
-          <span class="blog-tag">Tutorial</span>
-          <h3>Getting Started with AetherLM</h3>
-          <p>A beginner's guide to our cosmos-inspired neural network architecture and how to contribute.</p>
-          <span class="blog-read-more">Read on Blog <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
-        </div>
-      </a>
-    </div>
-    <div class="blog-footer">
-      <a href="https://blog.mlnomads.com/" class="view-all-btn" target="_blank" rel="noopener">
-        Visit Our Blog <i class="fas fa-arrow-right" aria-hidden="true"></i>
-      </a>
+    <p class="section-subtitle">Event recaps, research notes, and community stories</p>
+    <div class="blog-cta-card">
+      <div class="blog-cta-content">
+        <p>We write about our hackathons, workshop takeaways, white-box AI research, and what the community is building.</p>
+        <a href="https://blog.mlnomads.com/" class="blog-cta-btn" target="_blank" rel="noopener">
+          Visit Our Blog <i class="fas fa-arrow-right" aria-hidden="true"></i>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -274,27 +261,39 @@
     <div class="faq-container">
       <details class="faq-item">
         <summary>What is MLNomads?</summary>
-        <p>MLNomads is an open research community focused on building responsible, transparent AI systems. We develop white-box models where every decision can be traced and understood.</p>
+        <div class="faq-answer">
+          <p>MLNomads is an AI community that organizes hackathons, workshops, and events around transparent, interpretable AI. We also build open-source tools together.</p>
+        </div>
       </details>
       <details class="faq-item">
         <summary>What is "white-box AI"?</summary>
-        <p>White-box AI refers to machine learning models that are fully interpretable and transparent. Unlike black-box models, every weight, activation, and decision can be inspected, understood, and audited.</p>
+        <div class="faq-answer">
+          <p>White-box AI refers to machine learning models that are fully interpretable and transparent. Unlike black-box models, every weight, activation, and decision can be inspected, understood, and audited.</p>
+        </div>
       </details>
       <details class="faq-item">
         <summary>How can I join the community?</summary>
-        <p>Join our <a href="https://www.mlnomads.com/discord">Discord server</a> to connect with other members, participate in discussions, and find ways to contribute. All skill levels are welcome!</p>
+        <div class="faq-answer">
+          <p>Join our <a href="https://www.mlnomads.com/discord">Discord server</a> to connect with other members, participate in discussions, and find ways to contribute. All skill levels are welcome!</p>
+        </div>
       </details>
       <details class="faq-item">
         <summary>How can I contribute?</summary>
-        <p>All our work is open source on <a href="https://github.com/mlnomads" target="_blank" rel="noopener">GitHub</a>. You can contribute code, documentation, research, or feedback. Check the issues tab on any repo to find tasks suited to your skills.</p>
+        <div class="faq-answer">
+          <p>Join our events, participate in hackathons, or contribute to our open-source projects on <a href="https://github.com/mlnomads" target="_blank" rel="noopener">GitHub</a>. You can also help with documentation, research, or just share what you learn.</p>
+        </div>
       </details>
       <details class="faq-item">
         <summary>Do I need a PhD to participate?</summary>
-        <p>Absolutely not! We welcome members of all experience levels — students, hobbyists, professionals, and researchers. Our community is about learning together and building in the open.</p>
+        <div class="faq-answer">
+          <p>Absolutely not! We welcome members of all experience levels — students, hobbyists, professionals, and researchers. Our community is about learning together and building in the open.</p>
+        </div>
       </details>
       <details class="faq-item">
         <summary>Where can I find upcoming events?</summary>
-        <p>We host events on <a href="https://lu.ma/mlnomads" target="_blank" rel="noopener">Luma</a> including workshops, paper readings, and community calls. You can also check the <a href="#events">Events section</a> on this page.</p>
+        <div class="faq-answer">
+          <p>We host events on <a href="https://lu.ma/mlnomads" target="_blank" rel="noopener">Luma</a> including workshops, paper readings, and community calls. You can also check the <a href="#events">Events section</a> on this page.</p>
+        </div>
       </details>
     </div>
   </section>
@@ -306,23 +305,23 @@
     <div class="join-container">
       <h2>Join the Community</h2>
       <p class="join-description">
-        Whether you're a researcher, engineer, student, or AI enthusiast — there's a place for you in MLNomads.
+        Come to a hackathon, drop into a workshop, or just say hi on Discord — everyone's welcome.
       </p>
       <div class="join-links">
         <a href="https://www.mlnomads.com/discord" class="join-link-card" target="_blank" rel="noopener">
           <i class="fab fa-discord" aria-hidden="true"></i>
           <h3>Discord</h3>
-          <p>Chat and collaborate in real-time</p>
+          <p>Chat, ask questions, find teams</p>
         </a>
         <a href="https://github.com/mlnomads" class="join-link-card" target="_blank" rel="noopener">
           <i class="fab fa-github" aria-hidden="true"></i>
           <h3>GitHub</h3>
-          <p>Contribute to open-source</p>
+          <p>Build with us in the open</p>
         </a>
         <a href="https://lu.ma/mlnomads" class="join-link-card" target="_blank" rel="noopener">
           <i class="fas fa-calendar-alt" aria-hidden="true"></i>
           <h3>Events</h3>
-          <p>Attend workshops and meetups</p>
+          <p>Hackathons, workshops, talks</p>
         </a>
         <a href="https://twitter.com/mlnomads" class="join-link-card" target="_blank" rel="noopener">
           <i class="fab fa-twitter" aria-hidden="true"></i>
@@ -337,14 +336,16 @@
   <section id="newsletter" class="newsletter-section reveal">
     <div class="newsletter">
       <h3>Stay in the Loop</h3>
-      <p>Get updates on our research, events, and community news. No spam, ever.</p>
+      <p>Want to hear about our next hackathon or workshop? Drop your email and we'll keep you posted.</p>
       <form class="newsletter-form" id="newsletter-form">
         <input type="email" class="newsletter-input" id="newsletter-email" placeholder="your@email.com" required aria-label="Email address" autocomplete="email" />
-        <button type="submit" class="newsletter-btn" id="newsletter-submit">Subscribe</button>
+        <button type="submit" class="newsletter-btn" id="newsletter-submit">Get in Touch</button>
       </form>
       <p class="newsletter-status" id="newsletter-status" role="alert" aria-live="polite"></p>
     </div>
   </section>
+
+  </main>
 
   <!-- Footer -->
   <footer class="site-footer">
@@ -355,7 +356,7 @@
           <span class="company-name">MLNomads</span>
         </div>
         <p class="footer-tagline">
-          Building responsible white-box AI one neuron at a time
+          An AI community for hackathons, workshops, and open-source research
         </p>
       </div>
 
@@ -370,7 +371,7 @@
 
       <div class="footer-col contact">
         <h4>Connect</h4>
-        <p><i class="fas fa-envelope" aria-hidden="true"></i> info@mlnomads.com</p>
+        <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:info@mlnomads.com">info@mlnomads.com</a></p>
         <div class="footer-social">
           <a href="https://www.mlnomads.com/discord" target="_blank" rel="noopener" aria-label="Discord"><i class="fab fa-discord" aria-hidden="true"></i></a>
           <a href="https://twitter.com/mlnomads" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
@@ -380,7 +381,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2025 MLNomads. All rights reserved.</p>
+      <p>&copy; <span id="footer-year">2025</span> MLNomads. All rights reserved.</p>
     </div>
   </footer>
 
@@ -390,7 +391,6 @@
   </button>
 
   <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" defer></script>
   <script src="js/loader.js" defer></script>
   <script src="js/menu.js" defer></script>
   <script src="js/navigation.js" defer></script>
@@ -399,7 +399,7 @@
   <script src="js/faq.js" defer></script>
   <script src="js/reveal.js" defer></script>
   <script src="js/newsletter.js" defer></script>
-  <script src="js/counters.js" defer></script>
+  <script src="storm.js" defer></script>
 </body>
 
 </html>
