@@ -7,13 +7,9 @@
 @import 'components/navbar.css';
 @import 'components/hero.css';
 @import 'components/about.css';
-@import 'components/pillars.css';
 @import 'components/events.css';
-@import 'components/highlights.css';
-@import 'components/blog.css';
 @import 'components/faq.css';
 @import 'components/join.css';
-@import 'components/newsletter.css';
 @import 'components/footer.css';
 @import 'components/buttons.css';
 @import 'components/loader.css';
@@ -71,7 +67,7 @@ button:focus:not(:focus-visible) {
   text-decoration: none;
   font-size: 0.9rem;
   padding: 0.75rem 1.5rem;
-  border: 1px solid rgba(244, 165, 96, 0.3);
+  border: 1px solid rgba(var(--terracotta-rgb), 0.3);
   border-radius: var(--radius-md);
   transition: gap 0.3s ease, border-color 0.3s ease, background 0.3s ease;
 }
@@ -79,7 +75,7 @@ button:focus:not(:focus-visible) {
 .view-all-btn:hover {
   gap: 0.75rem;
   border-color: var(--accent-color);
-  background: rgba(244, 165, 96, 0.05);
+  background: rgba(var(--terracotta-rgb), 0.05);
 }
 
 /* ── Nav Discord button ── */
@@ -123,18 +119,13 @@ button:focus:not(:focus-visible) {
   padding-left: 0.25rem;
 }
 
-/* ── Section dividers ── */
+/* ── Section dividers (subtle hairline) ── */
 .section-divider {
   height: 1px;
   width: 100%;
-  max-width: 600px;
+  max-width: 480px;
   margin: 0 auto;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(244, 165, 96, 0.2),
-    transparent
-  );
+  background: rgba(var(--sand-pale-rgb), 0.08);
 }
 
 /* ── Scroll-reveal ── */
@@ -149,13 +140,11 @@ button:focus:not(:focus-visible) {
   transform: translateY(0);
 }
 
-/* ── Section subtitle ── */
+/* ── Section subtitle position (typography in typography.css) ── */
 .section-subtitle {
   text-align: center;
-  color: rgba(255, 255, 255, 0.55);
-  font-size: 1rem;
   margin-top: -1rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -167,12 +156,8 @@ button:focus:not(:focus-visible) {
 }
 
 @media (max-width: 768px) {
-  .nav-discord-btn {
-    background: rgba(88, 101, 242, 0.12);
-  }
-
   .section-subtitle {
-    font-size: 0.9rem;
     margin-top: -0.5rem;
+    margin-bottom: 2.25rem;
   }
 }

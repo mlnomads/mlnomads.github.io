@@ -27,9 +27,9 @@
 }
 
 @keyframes tagPulse {
-  0% { box-shadow: 0 0 0 0 rgba(244, 165, 96, 0.4); }
-  70% { box-shadow: 0 0 0 10px rgba(244, 165, 96, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(244, 165, 96, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(var(--terracotta-rgb), 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(var(--terracotta-rgb), 0); }
+  100% { box-shadow: 0 0 0 0 rgba(var(--terracotta-rgb), 0); }
 }
 
 @keyframes gradientMove {

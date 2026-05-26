@@ -12,8 +12,8 @@
 }
 
 .faq-item {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(244, 165, 96, 0.08);
+  background: rgba(var(--sand-pale-rgb), 0.02);
+  border: 1px solid rgba(var(--terracotta-rgb), 0.08);
   border-radius: var(--radius-lg);
   overflow: hidden;
   transition: border-color 0.3s ease;
@@ -21,7 +21,7 @@
 
 .faq-item:hover,
 .faq-item[open] {
-  border-color: rgba(244, 165, 96, 0.25);
+  border-color: rgba(var(--terracotta-rgb), 0.25);
 }
 
 .faq-item summary {
@@ -29,7 +29,7 @@
   cursor: pointer;
   font-weight: 600;
   font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(var(--sand-pale-rgb), 0.85);
   list-style: none;
   display: flex;
   justify-content: space-between;
@@ -45,7 +45,7 @@
 .faq-item summary::after {
   content: '+';
   font-size: 1.3rem;
-  color: rgba(244, 165, 96, 0.6);
+  color: rgba(var(--terracotta-rgb), 0.6);
   transition: color 0.3s ease, transform 0.3s ease;
   flex-shrink: 0;
   margin-left: 1rem;
@@ -68,7 +68,7 @@
 
 .faq-answer p {
   padding: 0 1.25rem 1.1rem;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(var(--sand-pale-rgb), 0.65);
   font-size: 0.9rem;
   line-height: 1.7;
   margin: 0;
@@ -78,7 +78,7 @@
   color: var(--accent-color);
   text-decoration: underline;
   text-underline-offset: 2px;
-  text-decoration-color: rgba(244, 165, 96, 0.3);
+  text-decoration-color: rgba(var(--terracotta-rgb), 0.3);
 }
 
 .faq-answer a:hover {

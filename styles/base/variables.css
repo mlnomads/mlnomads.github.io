@@ -1,36 +1,60 @@
 :root {
-  --primary-color: #2d0f41;
-  --accent-color: rgb(244, 165, 96);
-  --text-color: white;
+  /* ── Desert palette ──
+     Indigo desert-night sky · terracotta sun · warm sand */
+  --desert-night: #161533;        /* deep indigo, primary bg */
+  --desert-dusk:  #2a2658;        /* warmer mid-tone for gradients */
+  --desert-shadow: #0d0c24;       /* near-black indigo, deepest */
+
+  --terracotta:   #c66b3d;        /* sun-baked clay, primary accent */
+  --terracotta-deep: #a35430;     /* darker terracotta for hover/pressed */
+  --sand:         #d4a574;        /* warm tan */
+  --sand-pale:    #e8d3a8;        /* pale sand, highlights */
+  --dune-shadow:  #6a5536;        /* shadowed dune */
+
+  /* RGB triplets for rgba() use */
+  --terracotta-rgb: 198, 107, 61;
+  --sand-rgb:       212, 165, 116;
+  --sand-pale-rgb:  232, 211, 168;
+  --desert-night-rgb: 22, 21, 51;
+
+  /* Legacy aliases (keep existing component CSS working) */
+  --primary-color: var(--desert-night);
+  --accent-color: var(--terracotta);
+  --accent-color-rgb: var(--terracotta-rgb);
+  --sand-color: var(--sand);
+
+  /* Text */
+  --text-color: #f5ebd7;          /* warm moonlit white */
+  --text-muted: rgba(245, 235, 215, 0.7);
+  --text-dim:   rgba(245, 235, 215, 0.5);
+
+  /* Typography */
+  --font-display: "Newsreader", "Iowan Old Style", "Palatino", Georgia, serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  /* Legacy alias */
+  --font-main: var(--font-display);
+
+  /* Layout */
   --transition-speed: 0.3s;
-  --font-main: "Orbitron", sans-serif;
-  --font-body: "Inter", sans-serif;
   --navbar-blur: 10px;
   --section-padding: 80px 20px;
-  --sand-color: #f4d03f;
-  --dune-shadow: #c5a14e;
-  --desert-night: #2d0f41;
-  
-  /* Status Colors */
-  --status-active: #2ed573;
-  --status-beta: #ff9f43;
-  --status-dev: #ff6b81;
-  
+
   /* Spacing */
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
   --spacing-lg: 1.5rem;
   --spacing-xl: 2rem;
-  
-  /* Border Radius */
+
+  /* Border radius */
   --radius-sm: 5px;
   --radius-md: 8px;
   --radius-lg: 12px;
   --radius-xl: 16px;
-  
+
   /* Shadows */
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.2);
-  --shadow-lg: 0 15px 30px rgba(0, 0, 0, 0.3);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 15px 30px rgba(0, 0, 0, 0.4);
 }

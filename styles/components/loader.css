@@ -41,7 +41,7 @@
   bottom: 0;
   margin: auto;
   z-index: 2;
-  filter: drop-shadow(0 0 15px rgba(244, 165, 96, 0.4));
+  filter: drop-shadow(0 0 15px rgba(var(--terracotta-rgb), 0.4));
   animation: logoPulse 2s ease-in-out infinite;
 }
 
@@ -56,7 +56,7 @@
   height: 200%;
   background: radial-gradient(
     circle at center,
-    rgba(244, 165, 96, 0.05) 0%,
+    rgba(var(--terracotta-rgb), 0.05) 0%,
     transparent 60%
   );
   animation: pulseGlow 4s ease-in-out infinite;
@@ -73,7 +73,7 @@
   width: 250%;
   height: 250%;
   border-radius: 50%;
-  border: 1px solid rgba(244, 165, 96, 0.08);
+  border: 1px solid rgba(var(--terracotta-rgb), 0.08);
   animation: expandRings 3s ease-in-out infinite;
   z-index: 1;
 }
@@ -84,7 +84,7 @@
   position: absolute;
   inset: -20px;
   border-radius: 50%;
-  border: 1px solid rgba(244, 165, 96, 0.05);
+  border: 1px solid rgba(var(--terracotta-rgb), 0.05);
   animation: expandRings 3s ease-in-out infinite;
 }
 
@@ -104,9 +104,9 @@
   position: absolute;
   inset: -100%;
   background: 
-    radial-gradient(circle at 20% 20%, rgba(244, 165, 96, 0.05) 0%, transparent 15%),
-    radial-gradient(circle at 80% 80%, rgba(244, 165, 96, 0.05) 0%, transparent 15%),
-    radial-gradient(circle at 50% 50%, rgba(244, 165, 96, 0.03) 0%, transparent 25%);
+    radial-gradient(circle at 20% 20%, rgba(var(--terracotta-rgb), 0.05) 0%, transparent 15%),
+    radial-gradient(circle at 80% 80%, rgba(var(--terracotta-rgb), 0.05) 0%, transparent 15%),
+    radial-gradient(circle at 50% 50%, rgba(var(--terracotta-rgb), 0.03) 0%, transparent 25%);
   animation: floatParticles 8s ease-in-out infinite;
 }
 
@@ -154,11 +154,11 @@
 @keyframes logoPulse {
   0%, 100% { 
     transform: scale(1);
-    filter: brightness(1) drop-shadow(0 0 15px rgba(244, 165, 96, 0.4));
+    filter: brightness(1) drop-shadow(0 0 15px rgba(var(--terracotta-rgb), 0.4));
   }
   50% { 
     transform: scale(1.05);
-    filter: brightness(1.2) drop-shadow(0 0 25px rgba(244, 165, 96, 0.6));
+    filter: brightness(1.2) drop-shadow(0 0 25px rgba(var(--terracotta-rgb), 0.6));
   }
 }
 

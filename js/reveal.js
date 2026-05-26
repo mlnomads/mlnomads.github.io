@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Stagger child cards
         const cards = entry.target.querySelectorAll(
-          '.pillar-card, .event-card, .highlight-card, .join-link-card, .stat-item, .faq-item'
+          '.event-card, .join-link-card, .faq-item'
         );
         cards.forEach((card, i) => {
           card.style.opacity = '0';

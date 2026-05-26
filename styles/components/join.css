@@ -11,7 +11,7 @@
 
 .join-description {
   font-size: 1.05rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(var(--sand-pale-rgb), 0.7);
   line-height: 1.7;
   max-width: 550px;
   margin: 0 auto 2.5rem;
@@ -19,13 +19,15 @@
 
 .join-links {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 .join-link-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(244, 165, 96, 0.08);
+  background: rgba(var(--sand-pale-rgb), 0.03);
+  border: 1px solid rgba(var(--terracotta-rgb), 0.08);
   border-radius: var(--radius-lg);
   padding: 1.75rem 1.25rem;
   text-align: center;
@@ -39,8 +41,8 @@
 }
 
 .join-link-card:hover {
-  border-color: rgba(244, 165, 96, 0.3);
-  background: rgba(244, 165, 96, 0.04);
+  border-color: rgba(var(--terracotta-rgb), 0.3);
+  background: rgba(var(--terracotta-rgb), 0.04);
 }
 
 .join-link-card i {
@@ -61,16 +63,12 @@
 }
 
 .join-link-card p {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(var(--sand-pale-rgb), 0.5);
   font-size: 0.8rem;
   line-height: 1.4;
 }
 
 @media (max-width: 768px) {
-  .join-links {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .join-link-card {
     padding: 1.25rem 1rem;
   }
@@ -81,9 +79,9 @@
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 480px) {
   .join-links {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 0.75rem;
   }
 }

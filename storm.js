@@ -9,10 +9,10 @@ var Sand = {
     windForce: 0,
     paused: false,
     colors: [
-        "rgba(194, 178, 128, 0.6)",
-        "rgba(228, 213, 183, 0.6)",
-        "rgba(220, 208, 180, 0.6)",
-        "rgba(184, 159, 122, 0.6)"
+        "rgba(212, 165, 116, 0.55)",
+        "rgba(232, 211, 168, 0.5)",
+        "rgba(198, 107, 61, 0.45)",
+        "rgba(245, 235, 215, 0.4)"
     ],
     init() {
         this.canvas = document.querySelector(this.el);

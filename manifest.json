@@ -1,11 +1,11 @@
 {
   "name": "MLNomads",
   "short_name": "MLNomads",
-  "description": "Building responsible white-box artificial intelligence",
+  "description": "A community of AI enthusiasts, researchers, and engineers.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#2d0f41",
-  "theme_color": "#2d0f41",
+  "background_color": "#161533",
+  "theme_color": "#161533",
   "icons": [
     {
       "src": "/imgs/favicon.ico",

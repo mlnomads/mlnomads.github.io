@@ -1,14 +1,47 @@
 body {
   font-family: var(--font-body);
+  font-size: 16px;
   line-height: 1.6;
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
+/* Display headings — Newsreader, upright, hierarchy via weight + size */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-main);
-  line-height: 1.2;
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
   color: var(--text-color);
 }
 
+h2 {
+  font-size: clamp(2.2rem, 4.5vw, 3.25rem);
+  text-align: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 36px;
+  height: 1px;
+  background: var(--terracotta);
+}
+
+h3 {
+  font-size: 1.35rem;
+  letter-spacing: -0.01em;
+}
+
+/* Body type */
 p, span, input, textarea, button {
   font-family: var(--font-body);
 }
@@ -18,31 +51,25 @@ p, span, input, textarea, button {
   font-weight: 400;
 }
 
+/* Nav uses body font — display serif is too decorative at nav sizes */
 .nav-links-left a,
 .nav-links-right a {
-  font-family: var(--font-main);
+  font-family: var(--font-body);
+  font-weight: 500;
+  letter-spacing: 0;
 }
 
-h2 {
-  font-size: 2.5rem;
-  text-align: center;
-  margin-bottom: 3rem;
-  position: relative;
-}
-
-h2::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background: var(--accent-color);
+/* Section subtitle — small caps tracking for a touch of editorial */
+.section-subtitle {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: rgba(var(--sand-pale-rgb), 0.55);
 }
 
 @media (max-width: 768px) {
   h2 {
-    font-size: 2rem;
+    margin-bottom: 2rem;
   }
 }

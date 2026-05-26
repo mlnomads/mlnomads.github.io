@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#2d0f41" />
+  <meta name="theme-color" content="#161533" />
   <title>404 - Page Not Found | MLNomads</title>
   <link rel="icon" type="image/x-icon" href="./imgs/favicon.ico" />
   <link rel="stylesheet" href="./styles/main.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
   <style>
     .error-page {
@@ -19,15 +19,15 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      background: linear-gradient(135deg, #2d0f41 0%, #3d1f51 100%);
+      background: var(--desert-night);
       padding: 2rem;
       padding-top: 80px;
     }
 
     .error-code {
       font-size: clamp(5rem, 15vw, 10rem);
-      font-family: "Orbitron", sans-serif;
-      color: rgba(244, 165, 96, 0.15);
+      font-family: var(--font-display);
+      color: rgba(var(--terracotta-rgb), 0.15);
       font-weight: 700;
       line-height: 1;
       margin-bottom: 1rem;
@@ -37,7 +37,7 @@
       font-size: 1.5rem;
       color: white;
       margin-bottom: 0.5rem;
-      font-family: "Orbitron", sans-serif;
+      font-family: var(--font-display);
     }
 
     .error-desc {
@@ -52,8 +52,8 @@
       align-items: center;
       gap: 0.5rem;
       padding: 0.75rem 1.5rem;
-      background: rgb(244, 165, 96);
-      color: #2d0f41;
+      background: var(--terracotta);
+      color: var(--desert-night);
       border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
@@ -76,7 +76,7 @@
     </div>
 
     <a href="/" id="home-link" aria-label="MLNomads Home">
-      <img src="imgs/MlNomadsSVG.svg" alt="MLNomads Logo" class="nav-logo" />
+      <img src="imgs/mlnomads-logo.svg" alt="MLNomads Logo" class="nav-logo" />
     </a>
 
     <div class="nav-links-right">
@@ -97,8 +97,8 @@
   <div class="error-page">
     <div class="error-code">404</div>
     <h1 class="error-message">Lost in the Desert</h1>
-    <p class="error-desc">The page you're looking for doesn't exist or has been moved.</p>
-    <a href="/" class="error-home"><i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Home</a>
+    <p class="error-desc">The caravan moved on. This page isn't where you expected.</p>
+    <a href="/" class="error-home"><i class="fas fa-arrow-left" aria-hidden="true"></i> Back to camp</a>
   </div>
 
   <script src="js/menu.js" defer></script>

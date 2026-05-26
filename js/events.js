@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   const grid = document.getElementById('events-grid');
   if (!grid) return;
 
-  // Show skeleton loading state
   grid.innerHTML = Array.from({ length: 3 }, () => `
     <div class="event-card skeleton">
       <div class="skeleton-line skeleton-tag"></div>
@@ -26,8 +25,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     } catch { return '#'; }
   };
 
+  const safeImage = (url) => {
+    try {
+      const u = new URL(url);
+      if (!['http:', 'https:'].includes(u.protocol)) return '';
+      return u.href;
+    } catch { return ''; }
+  };
+
   try {
-    const response = await fetch('data/events.json');
+    const response = await fetch('data/events.json', { cache: 'no-cache' });
     const data = await response.json();
     const events = data.events || [];
 
@@ -35,29 +42,35 @@ document.addEventListener('DOMContentLoaded', async () => {
       grid.innerHTML = `
         <div class="events-empty">
           <i class="fas fa-calendar-alt"></i>
-          <p>No upcoming events right now. Check back soon or follow us on <a href="https://lu.ma/mlnomads" target="_blank" class="accent-link">Luma</a> for updates!</p>
+          <p>No upcoming events right now. Follow us on <a href="https://lu.ma/mlnomads" target="_blank" rel="noopener" class="accent-link">Luma</a> to hear when the next one is announced.</p>
         </div>
       `;
       return;
     }
 
-    grid.innerHTML = events.slice(0, 6).map(event => `
-      <a href="${safeUrl(event.link)}" class="event-card" target="_blank" rel="noopener">
-        <span class="event-type ${esc(event.type)}">${esc(event.type) || 'Event'}</span>
-        <div class="event-date">
-          <i class="fas fa-calendar-day"></i>
-          ${esc(event.date)}
-        </div>
-        <h3>${esc(event.title)}</h3>
-        <p>${esc(event.description)}</p>
-        <span class="event-link">RSVP on Luma <i class="fas fa-arrow-right"></i></span>
-      </a>
-    `).join('');
+    grid.innerHTML = events.slice(0, 6).map(event => {
+      const img = safeImage(event.image);
+      const location = event.location ? esc(event.location) : '';
+      return `
+        <a href="${safeUrl(event.link)}" class="event-card${img ? ' has-image' : ''}" target="_blank" rel="noopener">
+          ${img ? `<div class="event-cover" style="background-image:url('${img}')" aria-hidden="true"></div>` : ''}
+          <div class="event-body">
+            <span class="event-type ${esc(event.type)}">${esc(event.type) || 'Event'}</span>
+            <h3>${esc(event.title)}</h3>
+            <div class="event-meta">
+              <span class="event-date"><i class="fas fa-calendar-day"></i> ${esc(event.date)}</span>
+              ${location ? `<span class="event-location"><i class="fas fa-map-marker-alt"></i> ${location}</span>` : ''}
+            </div>
+            <span class="event-link">RSVP on Luma <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+      `;
+    }).join('');
   } catch (error) {
     grid.innerHTML = `
       <div class="events-empty">
         <i class="fas fa-calendar-alt"></i>
-        <p>Check our upcoming events on <a href="https://lu.ma/mlnomads" target="_blank" class="accent-link">Luma</a>!</p>
+        <p>Check our upcoming events on <a href="https://lu.ma/mlnomads" target="_blank" rel="noopener" class="accent-link">Luma</a>.</p>
       </div>
     `;
   }

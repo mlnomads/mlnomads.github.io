@@ -18,7 +18,7 @@
   visibility: hidden;
   transform: translateY(10px);
   transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.3s ease;
-  box-shadow: 0 4px 15px rgba(244, 165, 96, 0.3);
+  box-shadow: 0 4px 15px rgba(var(--terracotta-rgb), 0.3);
 }
 
 .scroll-to-top.visible {
